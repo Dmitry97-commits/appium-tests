@@ -4,7 +4,6 @@ const MainPage = require('../pageobjects/main.page')
 const UserPage = require('../pageobjects/user.page')
 const config = require('../config/default');
 
-
 describe('Suit of tests with Login, Opening position, Logout', () => {
 
     beforeEach(async () => {
@@ -34,7 +33,6 @@ describe('Suit of tests with Login, Opening position, Logout', () => {
         await UserPage.clickOnLogoutButton()
         await expect(MainPage.createAccountButton).toBeDisplayed()
     });
-
 
     afterEach(async () => {
         await driver.terminateApp(config.appid);

@@ -18,4 +18,5 @@ class MainPage extends BasePage{
         await this.click(this.iconOfUser)
     }
 }
+
 module.exports = new MainPage();

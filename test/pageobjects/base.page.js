@@ -14,7 +14,6 @@ class BasePage {
         await locator.waitForExist({ timeout: this.timeout });
         await locator.setValue(text)
     }
-
 }
 
 module.exports = BasePage;

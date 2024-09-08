@@ -8,7 +8,6 @@ class AppPage extends BasePage {
     async clickSignInButton() {
         await this.click(this.signInButton);
     }
-
 }
 
 module.exports = new AppPage();

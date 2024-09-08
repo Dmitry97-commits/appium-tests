@@ -1,9 +1,7 @@
 const { $ } = require('@wdio/globals')
 const BasePage = require("./base.page");
 
-
 class LoginPage extends BasePage{
-
     get inputUsername() {
         return $('-android uiautomator:new UiSelector().className("android.widget.EditText").instance(0)');
     }
@@ -17,11 +15,11 @@ class LoginPage extends BasePage{
     }
 
     get popUpRing(){
-        return $('//*[@resource-id="com.android.permissioncontroller:id/permission_icon"]')
+        return $('//*[@resource-id="com.android.permissioncontroller:id/permission_icon"]');
     }
 
     get allowButtonOnPopUp(){
-        return $('//*[@resource-id="com.android.permissioncontroller:id/permission_allow_button"]')
+        return $('//*[@resource-id="com.android.permissioncontroller:id/permission_allow_button"]');
     }
 
     async login(username, password) {
@@ -31,10 +29,9 @@ class LoginPage extends BasePage{
     }
 
     async clickAllowOnPopUp(){
-        await this.popUpRing.isDisplayed()
-        await this.click(this.allowButtonOnPopUp)
+        await this.popUpRing.isDisplayed();
+        await this.click(this.allowButtonOnPopUp);
     }
-
 }
 
 module.exports = new LoginPage();

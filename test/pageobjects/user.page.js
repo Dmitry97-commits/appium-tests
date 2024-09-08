@@ -14,4 +14,5 @@ class UserPage extends BasePage{
         await this.click(this.logoutButton)
     }
 }
+
 module.exports = new UserPage();
