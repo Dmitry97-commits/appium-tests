@@ -3,23 +3,23 @@ const BasePage = require("./base.page");
 
 class SignalDetailPage extends BasePage{
     get buyNowButton(){
-        return $('~Buy now')
+        return $('~Buy now');
     }
 
     get aaplHeader(){
-        return $('//android.widget.TextView[@text="AAPL"]')
+        return $('//android.widget.TextView[@text="AAPL"]');
     }
 
     get buyButton(){
-        return $('//android.view.ViewGroup[contains(@content-desc,"Buy")]')
+        return $('//android.view.ViewGroup[contains(@content-desc,"Buy")]');
     }
 
     async clickOnAaplHeader(){
-        await this.click(this.aaplHeader)
+        await this.click(this.aaplHeader);
     }
 
     async clickOnBuyButton(){
-        await this.click(this.buyButton)
+        await this.click(this.buyButton);
     }
 }
 

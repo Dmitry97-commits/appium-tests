@@ -20,16 +20,15 @@ describe('Suit of tests with Login, Opening position, Logout', () => {
     });
 
     it('Positive Open Position test', async ()=>{
-        await expect(MainPage.tradingSignalHeader).toBeDisplayed()
+        await expect(MainPage.tradingSignalHeader).toBeDisplayed();
 
         await MainPage.clickOnAAPL();
-        await expect(SignalDetailPage.buyNowButton).toBeDisplayed()
+        await expect(SignalDetailPage.buyNowButton).toBeDisplayed();
 
-        await SignalDetailPage.clickOnAaplHeader()
-        await expect(SignalDetailPage.buyButton).toBeDisplayed()
+        await SignalDetailPage.clickOnAaplHeader();
+        await expect(SignalDetailPage.buyButton).toBeDisplayed();
 
-        await SignalDetailPage.clickOnBuyButton()
-
+        await SignalDetailPage.clickOnBuyButton();
     });
 
     it('Positive Logout test', async () => {
