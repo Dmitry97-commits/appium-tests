@@ -7,7 +7,7 @@ class LoginPage extends BasePage{
     }
 
     get inputPassword() {
-        return $('//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.EditText');
+        return $('-android uiautomator:new UiSelector().className("android.widget.EditText").instance(1)');
     }
 
     get signInButton() {

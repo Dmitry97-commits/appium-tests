@@ -6,6 +6,14 @@ class MainPage extends BasePage{
         return $('//android.widget.TextView[@text="Investment Ideas"]')
     }
 
+    get tradingSignalAAPL(){
+        return $('//android.widget.TextView[@text="AAPL"]')
+    }
+
+    get tradingSignalHeader(){
+        return $('//android.widget.TextView[@text="Trading Signals"]')
+    }
+
     get createAccountButton(){
         return $('//android.widget.TextView[@text="Create account"]')
     }
@@ -16,6 +24,10 @@ class MainPage extends BasePage{
 
     async clickOnIconOfUser(){
         await this.click(this.iconOfUser)
+    }
+
+    async clickOnAAPL(){
+        await this.click(this.tradingSignalAAPL)
     }
 }
 
